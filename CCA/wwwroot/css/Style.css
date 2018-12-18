@@ -148,3 +148,6 @@ body {
     font-size: 32px;
     background-color: lightgray;
 }
+.col-lg-4 col-md-12 mb-3 #image3{
+    margin-left: 150px;
+}
