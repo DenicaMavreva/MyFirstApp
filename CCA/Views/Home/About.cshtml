@@ -1,7 +1,143 @@
 ﻿@{
-    ViewData["Title"] = "About";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+    ViewData["Title"] = "How to feel the Art?";
+    ViewData["Description"] = " Our leading idea is to create a propriate environment for young people to feel free" +
+   " to express their feelings and emotions by creating/transforming them into ART!";
+    ViewData["Quote"] = "\"Art is chaotic, art cannot be described, art should be felt!- D.M.\"";
+    ViewData["RecentPost1"] = " \"The Culture College of Art aims to achieve international standards of excellence in the postgraduate and " +
+    "pre- /mid-professional education of artists and designers and related practitioners.\" ";
+    ViewData["RecentPost2"] = "   Our mission is as follows:‘The Culture College of Art aims to achieve international standards of excellence " +
+                             " in the postgraduate and pre- /mid-professional education of artists and designers" +
+                             "and related practitioners. It aims to achieve these through the quality of its teaching," +
+                             "research and practice and through its relationship with the institutions," +
+                             " industries and technologies associated with the disciplines of art and design.’";
 
-<p>Use this area to provide additional information.</p>
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Bootstrap core CSS -->
+    <link href="~/css/AboutCss.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yrsa" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Card -->
+    <div class="card card-cascade wider reverse">
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+        <!-- Card content -->
+        <div class="card-body card-body-cascade text-center">
+            <h1>@ViewData["Title"]</h1>
+            <h4>@ViewData["Quote"]</h4>
+            <iframe width="1100" height="600"
+                    src="https://www.youtube.com/embed/gPF_wUo4wYQ?autoplay=1"></iframe>
+            <p>@ViewData["Description"]</p>
+        </div>
+    </div>
+    <!-- Card -->
+    <div class="card">
+        <div class="card-body">
+          
+            <a href="https://www.youtube.com/watch?v=FY1RDAxKdLE" class="card-link">Magic Of Art</a>
+            <a href="https://www.youtube.com/watch?v=cFrFGYaQ5Jo" class="card-link">Eye of the Forrest</a>
+        </div>
+    </div>
+ 
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+
+                <!-- Featured image -->
+                <div class="view overlay rounded z-depth-2 mb-4">
+                    <img src="~/images/IMG_20170205_220039_508-58a0129a23ada__880.jpg" width="350" />
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+
+                <!-- Category -->
+                <a href="#!" class="pink-text">
+                    <h6 class="font-weight-bold mb-3"><i class="fa fa-map pr-2"></i>Culture</h6>
+                </a>
+                <!-- Post title -->
+                <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
+                <!-- Post data -->
+                <!-- Excerpt -->
+                <p class="dark-grey-text">
+                    Fostering a high level of understanding of the principles and practices of art and design.
+                </p>
+                <!-- Read more button -->
+                <a class="btn btn-info btn-rounded btn-md" asp-controller="Home" asp-action="Culture">See more</a>
+
+
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+
+                <!-- Featured image -->
+                <div class="view overlay rounded z-depth-2 mb-4">
+                    <img src="~/images/JIHZCv_rve4.jpg" width="350" />
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+
+                <!-- Category -->
+                <a href="#!" class="deep-orange-text">
+                    <h6 class="font-weight-bold mb-3"><i class="fa fa-graduation-cap pr-2"></i>Purpose</h6>
+                </a>
+                <!-- Post title -->
+                <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
+                <!-- Post data -->
+                <!-- Excerpt -->
+                <p class="dark-grey-text">
+                    Recruiting students of proven ability and by providing pre-professional and post-experience opportunities.
+                </p>
+                <!-- Read more button -->
+                <a class="btn btn-info btn-rounded btn-md" asp-controller="Home" asp-action="Education">See more</a>
+
+
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-6 mb-0">
+
+                <!-- Featured image -->
+                <div class="view overlay rounded z-depth-2 mb-4">
+                    <img src="~/images/oC8E3au7jzY.jpg" width="350" />
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+
+                <!-- Category -->
+                <a href="#!" class="blue-text">
+                    <h6 class="font-weight-bold mb-3"><i class="fa fa-fire pr-2"></i>Skill and craft</h6>
+                </a>
+                <!-- Post title -->
+                <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
+                <!-- Post data -->
+                <!-- Excerpt -->
+                <p class="dark-grey-text">
+                    Exploring the innovative applications of technologies and processes to the disciplines of art and design.
+                   
+                </p>
+                <!-- Read more button -->
+                <a class="btn btn-info btn-rounded btn-md"asp-controller="Home" asp-action="SkillAndCraft">See more</a>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+      <!-- Grid row -->
+</body>
+</html>
+

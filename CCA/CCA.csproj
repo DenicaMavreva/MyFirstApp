@@ -11,4 +11,25 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.5" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CCA.Data\CCA.Data.csproj" />
+    <ProjectReference Include="..\CCA.Models\CCA.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Education\Enrollment\" />
+    <Folder Include="Views\Education\Subjects\" />
+    <Folder Include="Views\Professors\" />
+    <Folder Include="Views\Students\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Courses\Courses.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_CoursesPartial.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>
