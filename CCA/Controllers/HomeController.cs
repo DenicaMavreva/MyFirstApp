@@ -40,6 +40,10 @@ namespace CCA.Controllers
         {
             return View();
         }
+        public IActionResult LifeChangingNews()
+        {
+            return View();
+        }
         public IActionResult Education()
         {
             return View();
