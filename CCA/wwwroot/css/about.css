@@ -1,0 +1,81 @@
+﻿h1 {
+    font-family: 'Cookie', cursive;
+    font-size: 55px;
+    text-align: center;
+}
+
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-family: 'Cookie', cursive;
+    font-size: 45px;
+    text-align: center;
+}
+
+
+p1 {
+    font-size: 40px;
+    font-family: 'Cookie', cursive;
+    text-align: center;
+}
+
+hr {
+    margin: 40px;
+    border-style: groove;
+    border-width: 1px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: dimgray;
+    color: white;
+    padding: 15px;
+    font-size: 35px;
+    border: none;
+    font-family: 'Cookie', cursive;
+    color: black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content a {
+    font-family: 'Cookie', cursive;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: dimgrey;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: gray;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: gray;
+}
