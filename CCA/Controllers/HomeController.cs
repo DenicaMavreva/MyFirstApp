@@ -32,6 +32,14 @@ namespace CCA.Controllers
         {
             return View();
         }
+        public IActionResult NextGenerationDesigners()
+        {
+            return View();
+        }
+        public IActionResult HiddenTalentsNews()
+        {
+            return View();
+        }
         public IActionResult Education()
         {
             return View();
