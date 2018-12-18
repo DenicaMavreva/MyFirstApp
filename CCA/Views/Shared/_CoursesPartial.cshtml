@@ -1,0 +1,12 @@
+﻿@model CCA.ViewModels.Home.CourseIndexDto
+
+<a asp-controller="Courses" asp-action="Courses" asp-route-id="@Model.Id" class="col-md-2">
+    <div class="product p-1 chushka-bg-color rounded-top rounded-bottom">
+        <h5 class="text-center mt-3">@Model.Title</h5>
+        <hr class="hr-1 bg-white" />
+        <p class="text-white text-center">
+            @Model.Description
+        </p>
+        <hr class="hr-1 bg-white" />
+    </div>
+</a>

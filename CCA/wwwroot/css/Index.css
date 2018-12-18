@@ -1,0 +1,18 @@
+﻿#form{
+    font-size: 250px;
+    font-family: 'Cookie', cursive;
+    text-align: center;
+}
+h1{
+    font-size: 85px;
+}
+h3 {
+    font-size: 50px;
+}
+h4{
+    font-size: 80px;
+}
+.mySlides{
+    position: center;
+    margin-left: 5px;
+}
