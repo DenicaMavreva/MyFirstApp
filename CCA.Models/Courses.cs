@@ -18,13 +18,7 @@ namespace CCA.Models
         public string Description { get; set; }
 
         public int Credits { get; set; }
-
-        public int UserId { get; set; }
-        public CCAUser User { get; set; }
-
-        public int ProfessorId { get; set; }
-        public Professor Professor { get; set; }
-
+        
         public virtual ICollection<Student> Students { get; set; }
 
         public virtual ICollection<Enrollment> Enrollments { get; set; }

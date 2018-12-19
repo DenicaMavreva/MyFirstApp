@@ -9,7 +9,6 @@ namespace CCA.Models
         public Student()
         {
             this.Subjects = new List<Subjects>();
-            this.Professors = new List<Professor>();
             this.Enrollments = new List<Enrollment>();
         }
         public int Id { get; set; }
@@ -28,8 +27,6 @@ namespace CCA.Models
         public Courses Courses { get; set; }
 
         public virtual ICollection<Subjects> Subjects { get; set; }
-
-        public virtual ICollection<Professor> Professors { get; set; }
 
         public virtual ICollection<Enrollment> Enrollments { get; set; }
 

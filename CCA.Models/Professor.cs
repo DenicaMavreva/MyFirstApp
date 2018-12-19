@@ -20,12 +20,7 @@ namespace CCA.Models
 
         public int PhoneNumber { get; set; }
 
-        public string Cabinet { get; set; }
-
         public string Email { get; set; }
-
-        public int StudentId { get; set; }
-        public Student Student { get; set; }
 
         public virtual ICollection<Courses> Courses { get; set; }
 

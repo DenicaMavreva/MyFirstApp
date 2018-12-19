@@ -23,27 +23,20 @@ namespace CCA.Controllers
             this.dbContext = dbContext;
         }
 
-        public IActionResult Courses()
+        public IActionResult ArtAndDesign()
         {
-            if (this.User.Identity.IsAuthenticated)
-            {
-                var viewModel = new LoggedInViewModel
-                {
-                    //Courses = dbContext.Courses.Select(p =>
-                    //    new CourseIndexDto
-                    //    {
-                    //        Id = p.Id,
-                    //        Title = p.Title,
-                    //        Description = p.Description.Substring(0, 37) + "...", //shortens desc if it is too long
-                    //    }).ToList()
-                };
-                return this.View("Courses", viewModel);
-            }
-            else
-            {
-                return View();
+            return this.View();
+        }
 
+        public IActionResult Details(int id)
+        {
+            var product = dbContext.Courses.FirstOrDefault(p => p.Id == id);
+            if (product == null)
+            {
+                return this.BadRequest("Invalid product id");
             }
+
+            return this.View(product);
         }
 
         [Authorize(Roles = adminRole)]
@@ -65,14 +58,13 @@ namespace CCA.Controllers
             {
                 Title = model.Title,
                 Description = model.Description,
-                Professor = model.Professor
             };
 
             dbContext.Add(course);
             try
             {
                 dbContext.SaveChanges();
-                return this.RedirectToAction("Course", "Create");
+                return this.RedirectToAction("Details", new { Id = course.Id });
             }
             catch (Exception e)
             {

@@ -8,10 +8,6 @@ namespace CCA.Models
     {
         public int  Id { get; set; }
         
-        public DateTime Reception { get; set; }
-
-        public string ProfessionalBachelor { get; set; }
-
         public string Bachelor { get; set; }
 
         public string Master { get; set; }

@@ -18,15 +18,11 @@
 
   <ItemGroup>
     <Folder Include="Views\Education\Enrollment\" />
-    <Folder Include="Views\Education\Subjects\" />
     <Folder Include="Views\Professors\" />
     <Folder Include="Views\Students\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Views\Courses\Courses.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
     <Content Update="Views\Shared\_CoursesPartial.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

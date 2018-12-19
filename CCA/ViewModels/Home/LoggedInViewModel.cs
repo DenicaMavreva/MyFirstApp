@@ -11,12 +11,10 @@ namespace CCA.ViewModels.Home
         public LoggedInViewModel()
         {
             this.Courses = new List<CourseIndexDto>();
-            this.Professors = new List<ProfessorIndexDto>();
         }
 
         public ICollection<CourseIndexDto> Courses { get; set; }
 
-        public ICollection<ProfessorIndexDto> Professors { get; set; }
 
     }
 }
