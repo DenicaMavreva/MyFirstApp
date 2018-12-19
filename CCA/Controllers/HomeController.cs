@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CCA.Data;
 using Microsoft.AspNetCore.Mvc;
 using CCA.Models;
-using CCA.ViewModels.Home;
+using CCA.ViewModels;
 
 namespace CCA.Controllers
 {
