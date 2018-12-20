@@ -3,14 +3,24 @@
     ViewData["Title"] = "_CoursesPartial";
 }
 
-<a asp-controller="Courses" asp-action="Details" asp-route-id="@Model.Id" class="col-md-2">
-    <div class="product p-1 chushka-bg-color rounded-top rounded-bottom">
-        <h5 class="text-center mt-3">@Model.Title</h5>
-        <hr class="hr-1 bg-white" />
-        <p class="text-white text-center">
-            @Model.Description
-        </p>
-        <hr class="hr-1 bg-white" />
-        <h6 class="text-center text-white mb-3">$@Model.Credits</h6>
+<div class="card" style="width: 20rem;">
+
+    <div class="card-body">
+        <a asp-controller="Courses" asp-action="Details" asp-route-id="@Model.Id" class="col-md-2">@Model.Title</a>
     </div>
-</a>
+    @if (@Model.Title == "Art & Design")
+    {
+        <img src="~/images/eb33d93d2da87c69526667a59069007d.jpg" height="300" />
+
+    }
+    @if (@Model.Title == "Architecture")
+    {
+        <img src="~/images/le-architecture.jpg" height="300" />
+
+    }
+    @if (@Model.Title == "Ceramics & Glass")
+    {
+        <img src="~/images/Etruscan_amphora_Louvre_E703_side_B.jpg" height="300" />
+
+    }
+</div>

@@ -1,0 +1,33 @@
+﻿@model Professor
+@{
+    ViewData["Title"] = "Details";
+}
+<main class="mt-3 mb-5">
+
+    <div class="card" style="width: 70rem;">
+        <div class="card-body">
+            <h5 class="font-weight-bold mb-3">@Model.FullName</h5>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Science Degree: @Model.ScienceDegree</li>
+                <li class="list-group-item">Phone number: @Model.PhoneNumber</li>
+                <li class="list-group-item">Email: @Model.Email</li>
+                <li class="list-group-item">Actions:</li>
+            </ul>
+            <div class="card-body">
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-controller="Professors" asp-action="EditProfessor" asp-route-id="@Model.Id" class="card-link">Edit</a>
+                    <a asp-controller="Professors" asp-action="DeleteProfessor" asp-route-id="@Model.Id" class="card-link">Delete</a>
+                    <a asp-controller="Professors" asp-action="AllProfessors" asp-route-id="@Model.Id" class="card-link">All Professors</a>
+
+                }
+                else
+                {
+                    <a asp-controller="Professors" asp-action="AllProfessors" asp-route-id="@Model.Id" class="card-link">All Professors</a>
+
+                }
+            </div>
+        </div>
+    </div>
+</main>

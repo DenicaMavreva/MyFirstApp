@@ -36,9 +36,7 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Courses" asp-action="Create">Create Courses</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Courses" asp-action="AllCourses">All Courses</a>
-                    </li>
+                 
 
                 }
                 else
@@ -121,7 +119,8 @@
                    
                         @if (User.IsInRole("Admin"))
                          {
-                             <a asp-controller="Courses" asp-action="Create">Courses</a>
+                             <a asp-controller="Courses" asp-action="Create">Create Courses</a>
+                             <a class="nav-link" asp-controller="Courses" asp-action="AllCourses">- All Courses</a>
                          }
                          else
                          {
@@ -130,7 +129,16 @@
                     
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-controller="Professors" asp-action="CreateProfessor">Create Professor</a>
+                        <a class="nav-link" asp-controller="Professors" asp-action="AllProfessors">- All Professors</a>
+
+                    }
+                    else
+                    {
+                        <a asp-controller="Professors" asp-action="Details">Professors</a>
+                    }
 
                 </li>
             </ul>

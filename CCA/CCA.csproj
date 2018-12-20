@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Education\Enrollment\" />
-    <Folder Include="Views\Professors\" />
     <Folder Include="Views\Students\" />
   </ItemGroup>
 

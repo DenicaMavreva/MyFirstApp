@@ -1,27 +1,27 @@
-﻿@model CCA.ViewModels.Course.LoggedInViewCourses
+﻿@model CCA.ViewModels.Professors.LoggedInViewProfessor
 @{
-    ViewData["Title"] = "AllCourses";
+    ViewData["Title"] = "AllProfessors";
 }
 
 <main class="mt-3 mb-5">
     <div class="container-fluid text-center">
         @if (@User.IsInRole("Admin"))
         {
-            <img src="~/images/courses.png" width="650" />
+            <img src="~/images/ProfessorsAcademicDress.jpg" width="650" />
         }
         else
         {
-            <img src="~/images/courses.png" width="650" />
+            <img src="~/images/ProfessorsAcademicDress.jpg" width="650" />
         }
     </div>
     <hr class="hr-2 bg-dark" />
-    @if (Model.Courses.Count > 0)
+    @if (Model.Professors.Count > 0)
     {
         <div class="container-fluid product-holder">
             @{
-                int rows = (Model.Courses.Count / 5);
+                int rows = (Model.Professors.Count / 5);
             }
-            @if (Model.Courses.Count % 5 != 0)
+            @if (Model.Professors.Count % 5 != 0)
             {
                 rows++;
             }
@@ -32,11 +32,11 @@
                     @for (int col = 0; col < 5; col++)
                     {
                         int currentIndex = col + (row * 5);
-                        if (Model.Courses.Count == currentIndex)
+                        if (Model.Professors.Count == currentIndex)
                         {
                             break;
                         }
-                        @await Html.PartialAsync("_CoursesPartial", Model.Courses.ToList()[currentIndex])
+                        @await Html.PartialAsync("_ProfessorsPartial", Model.Professors.ToList()[currentIndex])
                     }
                 </div>
             }
@@ -44,6 +44,6 @@
     }
     else
     {
-        <p>There are no courses in the database!</p>
+        <p>There are no professors in the database!</p>
     }
 </main>

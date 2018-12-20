@@ -1,0 +1,12 @@
+﻿@model CCA.ViewModels.Professors.ProfessorIndexDto
+@{
+    ViewData["Title"] = "_ProfessorsPartial";
+}
+
+<div class="card" style="width: 20rem;">
+
+    <div class="card-body">
+        <a asp-controller="Professors" asp-action="Details" asp-route-id="@Model.Id" class="col-md-2">@Model.FullName</a>
+    </div>
+
+</div>
