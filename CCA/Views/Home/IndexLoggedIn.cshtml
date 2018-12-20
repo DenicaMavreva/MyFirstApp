@@ -189,11 +189,11 @@ default-pills smooth-scroll">
             <nav class="nav nav-pills flex-column">
                 <a class="nav-link active" asp-controller="Courses" asp-action="ArtAndDesign">Art & Design</a>
                 <nav class="nav nav-pills flex-column">
-                    <a class="nav-link ml-3 my-1" href="#item-1-1">Item 1-1</a>
+                    <a class="nav-link ml-3 my-1" asp-controller="Courses" asp-action="Architecture">Architecture</a>
                 </nav>
-                <a class="nav-link" href="#item-2">Item2</a>
+                <a class="nav-link" asp-controller="Courses" asp-action="CityDesign">City Design</a>
                 <nav class="nav nav-pills flex-column">
-                    <a class="nav-link ml-3 my-1" href="#item-3-1">Item 3-1</a>
+                    <a class="nav-link ml-3 my-1" asp-controller="Courses" asp-action="CeramicsAndGlass">Ceramics and Glass</a>
                     <img src="~/images/abstract-art-artistic-935785.jpg" width="250" />
                 </nav>
             </nav>
@@ -205,13 +205,13 @@ default-pills smooth-scroll">
             <img src="~/images/umbrella-2412363_960_720.jpg" width="500"/>
             <img src="~/images/LPA159.jpg" width="320"/>
 
-            <h5 id="item-1-2">Item 2-2</h5>
             <p>
-                Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
-                qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
-                mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim
-                qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic.
-                Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.
+                Year after year, the CCA has proved the importance of bringing together designers, sculptors, engineers,
+                historians and scientists, to invent and innovate products and services that have created jobs, contributed
+                to the economy and improved the quality of people’s lives.
+                Sixty per cent of what we teach today has been part of our curriculum since 1968. In our digital age,
+                many universities are abandoning traditional subjects, tools and making. We believe that students at the
+                Culture College of Art need to experience both the most ancient and progressive of creative practices.
             </p>
         </div>
     </div>
@@ -230,10 +230,11 @@ default-pills smooth-scroll">
                      alt="Generic placeholder image">
                 <div class="media-body text-center text-md-left ml-md-3 ml-0">
                     <p>
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia magni dolores
-                        eos qui ratione voluptatem sequi nesciunt.
+                        "The CCA is driven by passion. A place to experiment, push boundaries, 
+                        to realise your dreams… with unforgettable people all living life to the full; believing 
+                        everything hasn’t been done before." 
                     </p>
-                    <button type="button" class="btn btn-primary btn-md">Read more</button>
+                    <p1 class="font-weight-bold">Anna M.</p1>
                 </div>
             </div>
         </div>
@@ -243,10 +244,11 @@ default-pills smooth-scroll">
             <div class="media d-block d-md-flex">
                 <div class="media-body pr-md-3 pr-0 text-center text-md-left">
                     <p>
-                        Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
-                        eligendi optio cumque nihil impedit.
+                        "My time at the CCA was inspirational from the outset and this was down to 
+                        three tutors whose creativity gave me energy, enabling me to be free and excited about design." 
                     </p>
-                    <button type="button" class="btn btn-primary btn-md">Read more</button>
+                    <p1 class="font-weight-bold">John G.</p1>
+
                 </div>
                 <img class="d-flex mr-3 avatar-2 mt-md-0 mt-3 mx-auto" src="https://mdbootstrap.com/img/Others/documentation/img (27)-mini.jpg"
                      alt="Generic placeholder image">
@@ -260,10 +262,12 @@ default-pills smooth-scroll">
                      alt="Generic placeholder image">
                 <div class="media-body text-center text-md-left ml-md-3 ml-0">
                     <p>
-                        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-                        placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Itaque earum rerum
-                        hic tenetur a sapiente delectus.
+                        "The CCA ultimately made me critique my own work at a much higher level.
+                        There is no where else I know that has such diverse creative talent, so closely packed
+                        and with such interesting people passing through as the CCA."
                     </p>
+                    <p1 class="font-weight-bold">Jane K.</p1>
+
                 </div>
             </div>
         </div>
@@ -282,13 +286,13 @@ default-pills smooth-scroll">
                          alt="Generic placeholder image">
                     <div class="media-body ml-md-3 ml-0">
                         <p align="justify">
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                            deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
-                            provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                            fuga.
+                            "I've always said the best thing about the Culture College of Art was receiving that 
+                            letter saying that I got in, and after that it went downhill... But, of course, that's not true. 
+                            Twenty-two years on from receiving that letter I look back at my time there and realise how lucky and
+                            how honoured I was to get a place." 
                         </p>
                         <div class="text-center text-md-left">
-                            <button type="button" class="btn btn-indigo btn-rounded btn-md">Read more</button>
+                            <p1 class="font-weight-bold">Wayne C.</p1>
                         </div>
                     </div>
                 </div>
@@ -296,12 +300,11 @@ default-pills smooth-scroll">
                 <div class="media d-block d-md-flex">
                     <div class="media-body mr-md-3 mr-0">
                         <p align="justify">
-                            Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
-                            est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
-                            voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis.
+                            "The Culture College provided me with the time, space, means and encouragement to be 
+                            creative, and more ‘chips and beans’ than was probably appropriate" 
                         </p>
                         <div class="text-center text-md-left">
-                            <button type="button" class="btn btn-indigo btn-rounded btn-md">Read more</button>
+                            <p1 class="font-weight-bold">Karla D.</p1>
                         </div>
                     </div>
                     <img class="d-flex mr-3 mb-md-0 mb-3 mt-md-0 mt-4 avatar-2 rounded-circle z-depth-1 mx-auto" src="https://mdbootstrap.com/img/Others/documentation/img (2)-mini.jpg"

@@ -34,26 +34,30 @@
                 @if (User.IsInRole("Admin"))
                 {
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Courses" asp-action="ArtAndDesign">Courses</a>
+                        <a class="nav-link" asp-controller="Courses" asp-action="Create">Create Courses</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Courses" asp-action="AllCourses">All Courses</a>
+                    </li>
+
                 }
                 else
                 {
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Courses" asp-action="ArtAndDesign">Courses</a>
+                        <a class="nav-link" asp-controller="Courses" asp-action="AllCourses">Courses</a>
                     </li>
                 }
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
+             
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                       aria-expanded="false">Dropdown</a>
+                       aria-expanded="false">Degree Programmes</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#navbar-example2-one">one</a>
-                        <a class="dropdown-item" href="#navbar-example2-two">two</a>
+                        <a class="dropdown-item" asp-controller="Courses" asp-action="ArtAndDesign">Art & Design</a>
+                        <a class="dropdown-item" asp-controller="Courses" asp-action="Architecture">Architecture</a>
+                        <a class="dropdown-item" asp-controller="Courses" asp-action="CeramicsAndGlass">Ceramics & Glass </a>
+                        <a class="dropdown-item" >.....</a>
                         <div role="separator" class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#navbar-example2-three">three</a>
+                        <a class="dropdown-item" asp-controller="Courses" asp-action="CityDesign">City Design...</a>
                     </div>
                 </li>
             </ul>
@@ -111,11 +115,19 @@
                 </li>
 
                 <li>
-                    <a href="#">Dashboard</a>
 
                 </li>
                 <li>
-                    <a asp-controller="Courses" asp-action="Create">Courses</a>
+                   
+                        @if (User.IsInRole("Admin"))
+                         {
+                             <a asp-controller="Courses" asp-action="Create">Courses</a>
+                         }
+                         else
+                         {
+                             <a asp-controller="Courses" asp-action="AllCourses">Courses</a>
+                         }
+                    
                 </li>
                 <li>
                     <a href="#">Shortcuts</a>
@@ -145,7 +157,6 @@
     <partial name="_LoginPartial" />
 
 
-
     @*container-fluid - full-width container*@
     <div class="container body-content">
         @RenderBody()
@@ -168,10 +179,11 @@
             <!-- Grid column -->
             <div class="col-md-4">
 
-                <i class="fa fa-area-chart fa-3x red-text"></i>
-                <h5 class="font-weight-bold my-4">Analytics</h5>
-                <p class="grey-text mb-md-0 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-                    maiores aperiam minima assumenda deleniti hic.
+                <i class="far fa-lightbulb fa-3x"></i>
+                <h5 class="font-weight-bold my-4">Inspiration</h5>
+                <p class="grey-text mb-md-0 mb-5">
+                    If you believe in yourself and have dedication and pride - and never quit,
+                    you'll be a winner. The price of victory is high but so are the rewards.
                 </p>
 
             </div>
@@ -179,11 +191,11 @@
 
             <!-- Grid column -->
             <div class="col-md-4">
-
-                <i class="fa fa-book fa-3x cyan-text"></i>
-                <h5 class="font-weight-bold my-4">Tutorials</h5>
-                <p class="grey-text mb-md-0 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-                    maiores aperiam minima assumenda deleniti hic.
+                <i class="fas fa-check fa-3x"></i>
+                <h5 class="font-weight-bold my-4">Success</h5>
+                <p class="grey-text mb-md-0 mb-5">
+                    Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all,
+                    love of what you are doing or learning to do.
                 </p>
 
             </div>
@@ -191,11 +203,11 @@
 
             <!-- Grid column -->
             <div class="col-md-4">
-
-                <i class="fa fa-comments-o fa-3x orange-text"></i>
+                <i class="far fa-smile fa-3x"></i>
                 <h5 class="font-weight-bold my-4">Support</h5>
-                <p class="grey-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-                    aperiam minima assumenda deleniti hic.
+                <p class="grey-text mb-0">
+                    Choose to focus your time, energy and conversation around people who inspire you,
+                    support you and help you to grow you into your happiest, strongest, wisest self.
                 </p>
 
             </div>
@@ -221,12 +233,16 @@
 
                         <!-- Grid column -->
                         <div class="col-md-4 mx-auto">
+                            <div class="row">
+                                <i class="fas fa-graduation-cap"></i>
+
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Culture College Of Art</h5>
+                            </div>
 
                             <!-- Content -->
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+
                             <p4>
-                                Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
+                               Use your imagination and create!
                             </p4>
 
                         </div>
@@ -238,7 +254,7 @@
                         <div class="col-md-2 mx-auto">
 
                             <!-- Links -->
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Degree Programmes </h5>
 
                             <ul class="list-unstyled">
                                 <li>
@@ -247,12 +263,7 @@
                                 <li>
                                     <a href="#!">Link 2</a>
                                 </li>
-                                <li>
-                                    <a href="#!">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Link 4</a>
-                                </li>
+                             
                             </ul>
 
                         </div>
@@ -264,21 +275,16 @@
                         <div class="col-md-2 mx-auto">
 
                             <!-- Links -->
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact</h5>
 
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="#!">Link 1</a>
+                                    <a asp-controller="Home" asp-action="Contact">Contact Us</a>
                                 </li>
                                 <li>
                                     <a href="#!">Link 2</a>
                                 </li>
-                                <li>
-                                    <a href="#!">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Link 4</a>
-                                </li>
+                             
                             </ul>
 
                         </div>
@@ -290,7 +296,7 @@
                         <div class="col-md-2 mx-auto">
 
                             <!-- Links -->
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Studing at the CCA</h5>
 
                             <ul class="list-unstyled">
                                 <li>
@@ -299,12 +305,7 @@
                                 <li>
                                     <a href="#!">Link 2</a>
                                 </li>
-                                <li>
-                                    <a href="#!">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Link 4</a>
-                                </li>
+                              
                             </ul>
 
                         </div>

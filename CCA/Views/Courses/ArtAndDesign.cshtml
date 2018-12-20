@@ -2,28 +2,25 @@
 @{
     ViewData["Title"] = "Art And Design";
 }
+
 <main>
     <link href="~/css/Designers.css" rel="stylesheet" />
-
-    <h1 class="text-center font-weight-bold">Graduate Diploma Art & Design </h1>
-
+    <h1 class="text-center font-weight-bold">Architecture </h1>
 
     <div class="row">
         <div class="column">
             <div class="list-group">
-                <a class="list-group-item">Programme Description</a>
-                <a class="list-group-item">Entrance Requirements</a>
-                <a class="list-group-item">School of Arts & Humanities</a>
-                <a class="list-group-item">School of Architecture</a>
-                <a class="list-group-item">School of Communication</a>
-                <a class="list-group-item">School of Design</a>
-                <a class="list-group-item">Tuition fees</a>
+                <a class="list-group-item list-group-item-action active" href="#list-item-1">Programme Description</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2">Entrance Requirements</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3">School of Arts & Humanities </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">School of Communication </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-5">School of Architecture</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-6">School of Design </a>
+                <a class="list-group-item " asp-controller="Courses" asp-action="Fees">Tuition fees</a>
                 <a class="list-group-item" asp-controller="Home" asp-action="Contact">Contact</a>
-                <a class="list-group-item">Apply</a>
-
+                <a class="list-group-item list-group-item-action" href="#list-item-8">Apply</a>
             </div>
         </div>
-
         <div class="column">
             <iframe width="850" height="442"
                     src="https://www.youtube.com/embed/8iloTcgzrZo?autoplay=1"></iframe>
@@ -31,19 +28,214 @@
 
     </div>
     <hr />
-    <div class="card">
-        <div class="card-body">
-            <p class="card-text">
-                The Graduate Diploma Art & Design prepares students for Master’s study in Art and Design.
-                The programme focuses on developing proficiency in the discursive languages and independent
-                learning methods and practices of art and design, and on introducing students to the role and
-                influence of art and design in the world today.
-            </p>
+    <!-- Grid row -->
+    <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-10 col-lg-9 col-xl-6 mb-r">
+
+            <!--Panel-->
+            <div class="card card-body mb-3">
+                <div class="media d-block d-md-flex">
+                    <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                        <h5 class="font-weight-bold" id="list-item-1">Programme Description</h5>
+                        <p>
+                            The Graduate Diploma consists of two blocks of 15-week study, with the first block including an
+                            introduction to specialist study at Master’s level in art and design and leading towards further
+                            and more in-depth study, practice and portfolio development in the second block.
+                            The first part offers a theme-based introduction to the specialist study of art and design, and
+                            the various study options available in the field together with an introduction to the kinds of
+                            learning methods that students are likely to encounter in the study of art and design.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <!--/.Panel-->
+            <!--Panel-->
+            <div class="card card-body mb-3">
+                <div class="media d-block d-md-flex">
+                    <div class="media-body pr-md-3 pr-0 text-center text-md-left">
+                        <h4 id="list-item-5" class="font-weight-bold">School of Architecture</h4>
+
+                        <p class="font-weight-bold">
+                            Architecture
+                        </p>
+                        <p>
+                            City Design
+                        </p>
+                        <p class="font-weight-bold">
+                            Environmental Architecture
+                        </p>
+                        <p>
+                            Interior Design
+                        </p>
+                        <p class="font-weight-bold">
+                            Exhibition Design
+                        </p>
+                        <p>
+                            MPhil/PhD Architecure
+                        </p>
+                        <p class="font-weight-bold">
+                            MRes RCA: Architecture Pathway
+                        </p>
+
+                        <hr />
+
+                    </div>
+
+                </div>
+            </div>
+            <!--/.Panel-->
+            <!--Panel-->
+            <div class="card card-body">
+                <div class="media d-block d-md-flex">
+                    <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                        <h4 id="list-item-6" class="font-weight-bold">School of Design </h4>
+                        <p>
+                            Design Products
+                        </p>
+                        <p>
+                            Fashion Menswear
+                        </p>
+                        <p>
+                            Fashion Womenswear
+                        </p>
+                        <p>
+                            Global Innovation Design
+                        </p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="card card-body">
+                <div class="media d-block d-md-flex">
+                    <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                        <h4 id="list-item-8" class="font-weight-bold">Apply</h4>
+
+                        <p>
+                            Online Applications
+                            All applications are to be submitted via the CCA Online Applications website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="media d-block d-md-flex">
+                    <div class="media-body text-center text-md-left ml-md-3 ml-0">
+
+                        <h4 id="list-item-5" class="font-weight-bold">Contact Us</h4>
+                        <a asp-controller="Home" asp-action="Contact">Contacts..</a>
+
+                    </div>
+                </div>
+            </div>
+            <!--/.Panel-->
 
         </div>
+        <!-- Grid column -->
+        <div class="col-md-10 col-lg-9 col-xl-6">
+
+            <!--Panel-->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="media d-block d-md-flex mt-md-0 mt-4 mb-4">
+                        <div class="media-body ml-md-3 ml-0">
+                            <h4 id="list-item-3" class="font-weight-bold">Programmes & Pathways </h4>
+                            <h5>School of Arts & Humanities</h5>
+                            <p>
+                                >> Graduate Diploma Art & Design
+                            </p>
+                            <p>
+                                >> Ceramics & Glass
+                            </p>
+                            <p>
+                                >> Contemporary Art Practice
+                            </p>
+                            <p>
+                                >> Critical Practice
+                            </p>
+                            <p>
+                                >> Moving Image
+                            </p>
+                            <p>
+                                >> Performance
+                            </p>
+                            <p>
+                                >> Public Sphere
+                            </p>
+                            <p>
+                                >> Curating Contemporary Art
+                            </p>
+                        </div>
+                    </div>
+
+               
+                    <hr />
+                    <h4 id="list-item-4" class="font-weight-bold">School of Communication </h4>
+                    <h5>>> Explore your funding options</h5>
+                    <p>
+                    
+                        
+                        Information Experience Design
+                        MRes RCA: Communication Design Pathway
+                        Illustration
+                        Experimental Communication
+                    </p>
+                    <p>
+                        >> Animation
+                    </p>
+                    <p>
+                        >> Narrative Animation
+                    </p>
+                    <p>
+                        >> Digital Direction
+                    </p>
+                    <p>
+                        >>  Moving Image Design
+                    </p>
+                    <p>
+                        >> Experimental Design
+                    </p>
+                    <p>
+                        >>  Visual Communication
+                    </p>
+                    <p>
+                        >>  Graphic Design
+                    </p>
+                    <p>
+                        >>  Sound Design
+
+                    </p>
+                    <hr />
+                    <div class="media d-block d-md-flex">
+                        <div class="media-body mr-md-3 mr-0">
+                            <h4 id="list-item-2" class="font-weight-bold">Entrance Requirements</h4>
+
+                            <p>
+                                Those who have the required educational background to go on to Master’s study, but who require
+                                greater proficiency in the English language.
+                                Those who do not have an undergraduate background in art and design, but who can demonstrate
+                                potential in their chosen discipline of study.
+                                Those for whom their undergraduate studies did not adequately prepare them for Master’s study
+                                at the CCA.
+                                Those who would like to use the programme as a diagnostic experience to help them decide which
+                                area to specialise in at Master’s level.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.Panel-->
+      
+        </div>
+        <!-- Grid column -->
+
     </div>
+    <hr />
     <img src="~/images/fine-art-wallpapers-21.jpg" width="1110" />
+
+
+
 </main>
-
-
 
