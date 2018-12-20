@@ -1,0 +1,36 @@
+﻿@model CCA.ViewModels.Course.CourseInputViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<main class="mt-3 mb-5">
+    <h1 class="text-center">Delete Course</h1>
+    <hr class="hr-2 bg-dark" />
+    <form class="mx-auto half-width" method="post" asp-controller="Courses" asp-action="Delete">
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" placeholder="Title..." value="@Model.Title" disabled>
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Credits"></label>
+            <input asp-for="Credits" class="form-control" placeholder="Credits..." value="@Model.Credits" disabled>
+            <span asp-validation-for="Credits" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control" rows="4" placeholder="Description..." value="@Model.Description" disabled></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <hr class="hr-2 bg-dark half-width mt-4" />
+    
+        <div class="button-holder mt-2 d-flex w-25 mx-auto justify-content-between">
+            <button type="submit" class="btn chushka-bg-color" asp-controller="Courses" asp-action="DoDelete">Delete</button>
+            <button asp-controller="Home" asp-action="Index" type="submit" class="btn chushka-bg-color">Cancel</button>
+    
+        </div>
+    </form>
+</main>

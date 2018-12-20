@@ -1,0 +1,50 @@
+﻿@model CCA.ViewModels.Course.LoggedInViewCourses
+@{
+    ViewData["Title"] = "AllCourses";
+}
+
+<main class="mt-3 mb-5">
+    <div class="container-fluid text-center">
+        @if (@User.IsInRole("Admin"))
+        {
+            <h2>Greetings, @User.Identity.Name!</h2>
+        }
+        else
+        {
+            <h2>All Courses</h2>
+        }
+    </div>
+    <hr class="hr-2 bg-dark"/>
+    @if (Model.Courses.Count > 0)
+    {
+        <div class="container-fluid product-holder">
+
+            @{
+                int rows = (Model.Courses.Count / 5);
+            }
+            @if (Model.Courses.Count % 5 != 0)
+            {
+                rows++;
+            }
+
+            @for (int row = 0; row < rows; row++)
+            {
+                <div class="row d-flex justify-content-around mb-4">
+                    @for (int col = 0; col < 5; col++)
+                    {
+                        int currentIndex = col + (row * 5);
+                        if (Model.Courses.Count == currentIndex)
+                        {
+                            break;
+                        }
+                        @await Html.PartialAsync("_CoursesPartial", Model.Courses.ToList()[currentIndex])
+                    }
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>There are no products in the database!</p>
+    }
+</main>
