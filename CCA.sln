@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCA", "CCA\CCA.csproj", "{A4DBC75D-336B-469A-A9B3-C721C05DB58D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CCA", "CCA\CCA.csproj", "{A4DBC75D-336B-469A-A9B3-C721C05DB58D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCA.Data", "CCA.Data\CCA.Data.csproj", "{110A20A7-0D68-47B9-A35F-7901EC5330DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CCA.Data", "CCA.Data\CCA.Data.csproj", "{110A20A7-0D68-47B9-A35F-7901EC5330DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCA.Models", "CCA.Models\CCA.Models.csproj", "{825955C4-C36B-423F-AA41-FB126E90635E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CCA.Models", "CCA.Models\CCA.Models.csproj", "{825955C4-C36B-423F-AA41-FB126E90635E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
