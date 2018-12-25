@@ -29,6 +29,7 @@ namespace CCA.Controllers
                     Id = p.Id,
                     FullName = p.FullName,
                     ScienceDegree = p.ScienceDegree,
+                    PhoneNumber = p.PhoneNumber,
                     Email = p.Email,
                 }).ToList()
             };
@@ -153,7 +154,7 @@ namespace CCA.Controllers
             return this.View(viewModel);
         }
 
-        [HttpPost("/courses/delete/{id}")]
+        [HttpPost("/professors/delete/{id}")]
         [Authorize(Roles = adminRole)]
         public IActionResult DoDeleteProfessor(int id)
         {
