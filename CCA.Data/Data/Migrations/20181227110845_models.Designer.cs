@@ -4,14 +4,16 @@ using CCA.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CCA.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181227110845_models")]
+    partial class models
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -99,9 +101,15 @@ namespace CCA.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Bachelor");
+
                     b.Property<int>("CourseId");
 
                     b.Property<int?>("CoursesId");
+
+                    b.Property<string>("Doctor");
+
+                    b.Property<string>("Master");
 
                     b.Property<int>("StudentId");
 
@@ -139,15 +147,19 @@ namespace CCA.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CoursesId");
+                    b.Property<int>("CourseId");
 
-                    b.Property<string>("Email");
+                    b.Property<int?>("CoursesId");
 
                     b.Property<DateTime>("EnrollmentDate");
 
                     b.Property<string>("Faculty");
 
+                    b.Property<int>("FacultyNumber");
+
                     b.Property<string>("FullName");
+
+                    b.Property<string>("QualificationDegrees");
 
                     b.HasKey("Id");
 
@@ -287,7 +299,7 @@ namespace CCA.Data.Migrations
 
             modelBuilder.Entity("CCA.Models.Student", b =>
                 {
-                    b.HasOne("CCA.Models.Courses")
+                    b.HasOne("CCA.Models.Courses", "Courses")
                         .WithMany("Students")
                         .HasForeignKey("CoursesId");
                 });

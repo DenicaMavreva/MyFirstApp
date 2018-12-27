@@ -17,8 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Education\Enrollment\" />
-    <Folder Include="Views\Students\" />
+    <Folder Include="Views\Education\" />
   </ItemGroup>
 
 </Project>

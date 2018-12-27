@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace CCA.Models
+namespace CCA.ViewModels.Students
 {
-    public class Student
+    public class StudentIndexDto
     {
-        public Student()
-        {
-            this.Enrollments = new List<Enrollment>();
-        }
         public int Id { get; set; }
 
         public string FullName { get; set; }
@@ -19,8 +16,5 @@ namespace CCA.Models
         public DateTime EnrollmentDate { get; set; }
 
         public string Email { get; set; }
-
-        public virtual ICollection<Enrollment> Enrollments { get; set; }
-
     }
 }

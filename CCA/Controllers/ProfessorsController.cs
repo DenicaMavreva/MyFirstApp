@@ -36,6 +36,22 @@ namespace CCA.Controllers
             return this.View(viewModel);
         }
 
+        public IActionResult AllProfessorsUserView()
+        {
+            var viewModel = new LoggedInViewProfessor
+            {
+                Professors = this.dbContext.Professors.Select(p => new ProfessorIndexDto
+                {
+                    Id = p.Id,
+                    FullName = p.FullName,
+                    ScienceDegree = p.ScienceDegree,
+                    PhoneNumber = p.PhoneNumber,
+                    Email = p.Email,
+                }).ToList()
+            };
+            return this.View(viewModel);
+        }
+
         public IActionResult Details(int id)
         {
             var professor = dbContext.Professors.FirstOrDefault(p => p.Id == id);
@@ -161,7 +177,8 @@ namespace CCA.Controllers
             var professor = dbContext.Professors.FirstOrDefault(c => c.Id == id);
             if (professor == null)
             {
-                return this.BadRequest("Invalid product ID.");
+                return this.BadRequest("Invalid professor" +
+                                       " ID.");
             }
 
             this.dbContext.Remove(professor);

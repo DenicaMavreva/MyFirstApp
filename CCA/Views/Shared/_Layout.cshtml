@@ -108,23 +108,43 @@
                 </li>
              
                 <li>
-                    <a href="#">Events</a>
+               
+                       
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-controller="Courses" asp-action="Create">Create Courses</a>
+                        <a class="nav-link" asp-controller="Courses" asp-action="AllCourses">- All Courses</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Courses" asp-action="AllCourses">Courses</a>
+                    }
                 </li>
 
                 <li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-controller="Users" asp-action="AllUsers">All Users</a>
 
+                    }
+                    else
+                    {
+
+                    }
                 </li>
                 <li>
-                   
-                        @if (User.IsInRole("Admin"))
-                         {
-                             <a asp-controller="Courses" asp-action="Create">Create Courses</a>
-                             <a class="nav-link" asp-controller="Courses" asp-action="AllCourses">- All Courses</a>
-                         }
-                         else
-                         {
-                             <a asp-controller="Courses" asp-action="AllCourses">Courses</a>
-                         }
+                
+                    
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-controller="Student" asp-action="CreateStudent">Create Student</a>
+                        <a class="nav-link" asp-controller="Student" asp-action="AllStudents">- All Students</a>
+
+                    }
+                    else
+                    {
+                        <a asp-controller="Student" asp-action="AllStudentsUserView">All Students</a>
+                    }
                     
                 </li>
                 <li>
@@ -136,7 +156,7 @@
                     }
                     else
                     {
-                        <a asp-controller="Professors" asp-action="AllProfessors">Professors</a>
+                        <a asp-controller="Professors" asp-action="AllProfessorsUserView">Professors</a>
                     }
 
                 </li>

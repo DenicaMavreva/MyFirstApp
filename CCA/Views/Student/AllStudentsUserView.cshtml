@@ -1,0 +1,37 @@
+﻿@model CCA.ViewModels.Students.LoggedInViewStudent
+@{
+    ViewData["Title"] = "AllStudentsUserView";
+}
+
+
+<main class="mt-3 mb-5">
+    <h1 class="text-center">All Students</h1>
+
+    <hr class="hr-2 bg-dark" />
+    <table class="table w-75 mx-auto table-hover">
+        <thead>
+            <tr class="row">
+                <th class="col-md-1">#</th>
+                <th class="col-md-4">Student</th>
+                <th class="col-md-2">Email</th>
+                <th class="col-md-2"></th>
+                <th class="col-md-2">Enrollment Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        @for (int rowIndex = 0; rowIndex < Model.Student.Count; rowIndex++)
+        {
+            var currentStudent = Model.Student.ToList()[rowIndex];
+
+
+            <tr class="row">
+                <th class="col-md-1">@(rowIndex + 1)</th>
+                <td class="col-md-4">@currentStudent.FullName</td>
+                <td class="col-md-2">@currentStudent.Email</td>
+                <td class="col-md-2">@currentStudent.Faculty</td>
+                <td class="col-md-2">@currentStudent.EnrollmentDate</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</main>
