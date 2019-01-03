@@ -12,20 +12,24 @@
                 <th class="col-md-1">#</th>
                 <th class="col-md-4">Name</th>
                 <th class="col-md-2">Email</th>
+                <th class="col-md-2"></th>
+                <th class="col-md-2">Remove User</th>   
             </tr>
         </thead>
         <tbody>
-            @for (int rowIndex = 0; rowIndex < Model.Users.Count; rowIndex++)
-            {
-                var currentUser = Model.Users.ToList()[rowIndex];
+        @for (int rowIndex = 0; rowIndex < Model.Users.Count; rowIndex++)
+        {
+            var currentUser = Model.Users.ToList()[rowIndex];
 
-                <tr class="row">
-                    <th class="col-md-1">@(rowIndex + 1)</th>
-                    <td class="col-md-4">@currentUser.Username</td>
-                    <td class="col-md-4">@currentUser.Email</td>
-                </tr>
-            }
+            <tr class="row">
+                <th class="col-md-1">@(rowIndex + 1)</th>
+                <td class="col-md-4">@currentUser.Username</td>
+                <td class="col-md-4">@currentUser.Email</td>
+                <td><a asp-controller="Users" asp-action="DeleteUser" class="card-link">Delete</a></td>
+            </tr>
+        }
         </tbody>
 
     </table>
+    
 </main>

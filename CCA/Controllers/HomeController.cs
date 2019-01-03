@@ -27,6 +27,10 @@ namespace CCA.Controllers
             }
             return View();
         }
+        public IActionResult Enrollment()
+        {
+            return View();
+        }
 
         public IActionResult Culture()
         {

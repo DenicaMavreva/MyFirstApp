@@ -16,8 +16,4 @@
     <ProjectReference Include="..\CCA.Models\CCA.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Education\" />
-  </ItemGroup>
-
 </Project>

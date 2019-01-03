@@ -160,6 +160,10 @@
                     }
 
                 </li>
+                <li>
+                    <a asp-controller="Home" asp-action="Enrollment">Apply</a>
+
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -285,10 +289,10 @@
 
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="#!">Link 1</a>
+                                    <a asp-controller="Courses" asp-action="AllCourses">All Courses</a>
                                 </li>
                                 <li>
-                                    <a href="#!">Link 2</a>
+                                    <a asp-controller="Courses" asp-action="Architecture">Architecture</a>
                                 </li>
                              
                             </ul>
@@ -309,7 +313,8 @@
                                     <a asp-controller="Home" asp-action="Contact">Contact Us</a>
                                 </li>
                                 <li>
-                                    <a href="#!">Link 2</a>
+                                    <a asp-controller="Professors" asp-action="AllProfessors">Professors</a>
+
                                 </li>
                              
                             </ul>
@@ -327,10 +332,10 @@
 
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="#!">Link 1</a>
+                                    <a asp-controller="Home" asp-action="About">About</a>
                                 </li>
                                 <li>
-                                    <a href="#!">Link 2</a>
+                                    <a asp-controller="Courses" asp-action="CityDesign">City Design</a>
                                 </li>
                               
                             </ul>
