@@ -1,17 +1,21 @@
 using CCA.Controllers;
 using CCA.Models;
+using CCA.Services;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace CCA.Tests
 {
     public class CCATests
     {
-        private AccountController accountController;
-
         [Fact]
-        public void Test_Login()
+        public async Task<iactionResult> CoursesController()
         {
+            //assert
+            var controller = new CoursesController();
 
+            //Act
+            var result = await controller.Create();
         }
     }
 }
