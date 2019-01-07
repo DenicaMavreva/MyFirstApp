@@ -2,46 +2,49 @@
     ViewData["Navigation"] = "For directions and transport to the College, please see Maps & Visiting and Travel Information";
     ViewData["Quote"] = "Swing by for a cup of coffee, or leave us a message:";
 }
-<link href="~/css/contactCSS.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+<main>
+    <link href="~/css/contactCSS.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 
 
-<div class="container">
-    <img src="~/images/contact.png" />
-
-    <div style="text-align:center">
-
-        <p1>@ViewData["Quote"]</p1>
-        <hr/>
-    </div>
-    <div class="row">
-        <div class="column">
-            <img src="~/images/247-2472940_contact-bannersonline-ваш-бизнес-ход-с-е2-на-е4-книга-для-тех.png"/>
-        </div>
-        <div class="column">
-            <form action="/action_page.php">
-                <p>General Enquiries</p>
-                <hr/>
-                <address>
-                    Culture College of Art<br/>
-                    <i class="fas fa-map-marker-alt"></i> Kensington Gore, London SW7 2EU<br/>
-                    <i class="fas fa-address-book"></i> Tel: +44 (0)20 7590 4444 (Main switchboard)<br/>
-                    <i class="fas fa-fax"></i> Fax: +44 (0)20 7590 4500<br/>
-                </address>
-                <hr/>
-
-                <label for="fname">Email:</label>
-                <address>
-                    <strong>Support:</strong> <a>info@cca.mail.bg</a><br/>
-                    <strong>Marketing:</strong> <a>denicamavreva@mail.bg</a>
-                </address>
-
-            </form>
+    <div class="container">
+        <img src="~/images/contact.png" />
+        <div style="text-align:center">
+            <p1>@ViewData["Quote"]</p1>
+            <hr/>
         </div>
 
-        <p2>@ViewData["Navigation"]</p2>
+        <div class="row">
 
+            <div class="column">
+                <img src="~/images/247-2472940_contact-bannersonline-ваш-бизнес-ход-с-е2-на-е4-книга-для-тех.png"/>
+            </div>
+
+            <div class="column">
+                <form action="/action_page.php">
+                    <p>General Enquiries</p>
+                    <hr/>
+                    <address>
+                        Culture College of Art<br/>
+                        <i class="fas fa-map-marker-alt"></i> Kensington Gore, London SW7 2EU<br/>
+                        <i class="fas fa-address-book"></i> Tel: +44 (0)20 7590 4444 (Main switchboard)<br/>
+                        <i class="fas fa-fax"></i> Fax: +44 (0)20 7590 4500<br/>
+                    </address>
+                    <hr/>
+
+                    <label for="fname">Email:</label>
+                    <address>
+                        <strong>Support:</strong> <a>info@cca.mail.bg</a><br/>
+                        <strong>Marketing:</strong> <a>denicamavreva@mail.bg</a>
+                    </address>
+
+                </form>
+            </div>
+
+            <p2>@ViewData["Navigation"]</p2>
+
+        </div>
     </div>
-
-</div>
+</main>

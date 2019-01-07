@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "AllProfessorsUserView";
 }
-
 <main class="mt-3 mb-5">
     <h1 class="text-center">All Professors</h1>
 
@@ -22,8 +21,6 @@
             @for (int rowIndex = 0; rowIndex < Model.Professors.Count; rowIndex++)
             {
                 var currentProfessor = Model.Professors.ToList()[rowIndex];
-
-
                 <tr class="row">
                     <th class="col-md-1">@(rowIndex + 1)</th>
                     <td class="col-md-4">@currentProfessor.FullName</td>

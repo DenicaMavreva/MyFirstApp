@@ -19,12 +19,10 @@
                     <a asp-controller="Professors" asp-action="EditProfessor" asp-route-id="@Model.Id" class="card-link">Edit</a>
                     <a asp-controller="Professors" asp-action="DeleteProfessor" asp-route-id="@Model.Id" class="card-link">Delete</a>
                     <a asp-controller="Professors" asp-action="AllProfessors" asp-route-id="@Model.Id" class="card-link">All Professors</a>
-
                 }
                 else
                 {
                     <a asp-controller="Professors" asp-action="AllProfessors" asp-route-id="@Model.Id" class="card-link">All Professors</a>
-
                 }
             </div>
         </div>

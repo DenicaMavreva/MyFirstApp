@@ -125,11 +125,6 @@
                     @if (User.IsInRole("Admin"))
                     {
                         <a asp-controller="Users" asp-action="AllUsers">All Users</a>
-
-                    }
-                    else
-                    {
-
                     }
                 </li>
                 <li>
@@ -349,18 +344,6 @@
                 </div>
                 <!-- Footer Links -->
 
-                <hr>
-
-                <!-- Call to action -->
-                <ul class="list-unstyled list-inline text-center py-2">
-                    <li class="list-inline-item">
-                        <h5 class="mb-1 fa-1x">Register for free</h5>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-danger btn-rounded fa-1x" asp-controller="Account" asp-action="Register">Sign up!</a>
-                    </li>
-                </ul>
-                <!-- Call to action -->
 
                 <hr>
 

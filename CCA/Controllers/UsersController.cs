@@ -23,6 +23,19 @@ namespace CCA.Controllers
             this.userManager = userManager;
         }
 
+        public IActionResult UserDetails(string id)
+        {
+            var user = dbcontext.Users.FirstOrDefault(p => p.Id == id);
+            if (user == null)
+            {
+                return this.BadRequest("Invalid user id");
+            }
+            else
+            {
+                return this.View(user);
+            }
+        }
+
         public IActionResult AllUsers()
         {
             var viewModel = new AllUsersViewModel
@@ -39,24 +52,24 @@ namespace CCA.Controllers
             return View("AllUsers", viewModel);
         }
 
-       [Authorize(Roles = adminRole)]
-       public IActionResult DeleteUser(string id)
-       {
-           var user = dbcontext.Users.FirstOrDefault(c => c.Id == id);
-           if (user == null)
-           {
-               return this.BadRequest("Invalid user ID.");
-           }
+        [Authorize(Roles = adminRole)]
+        public IActionResult DeleteUser(string id)
+        {
+            var user = dbcontext.Users.FirstOrDefault(c => c.Id == id);
+            if (user == null)
+            {
+                return this.BadRequest("Invalid user ID.");
+            }
 
-           var viewModel = new UsersInputViewModel
-           {
-               FullName = user.FullName,
-               Email = user.Email
-           };
+            var viewModel = new UsersInputViewModel
+            {
+                FullName = user.FullName,
+                Email = user.Email
+            };
 
-           return this.View(viewModel);
-       }
-            
+            return this.View(viewModel);
+        }
+
         [HttpPost("/users/delete/{id}")]
         [Authorize(Roles = adminRole)]
         public IActionResult DoDeleteUser(string id)
@@ -79,5 +92,7 @@ namespace CCA.Controllers
                 return this.BadRequest(e.Message);
             }
         }
+
+
     }
 }

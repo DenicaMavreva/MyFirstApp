@@ -1,0 +1,9 @@
+﻿@model CCA.ViewModels.Users.AllUsersDto
+@{
+    ViewData["Title"] = "_UsersPartial";
+}
+<div class="card" style="width: 20rem;">
+    <div class="card-body">
+        <a asp-controller="Users" asp-action="UserDetails" asp-route-id="@Model.Id" class="col-md-2">@Model.Username</a>
+    </div>
+</div>
